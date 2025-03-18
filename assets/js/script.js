@@ -1,16 +1,18 @@
-/* JS for Hamburger */
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("Script loaded successfully.");
+
+    /* JS for Hamburger */
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector("#nav-menu");
 
-    hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-    });
-});
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    }
 
-/* JS for login popup */
-document.addEventListener("DOMContentLoaded", function () {
-    //login popup dynamically
+    /* JS for login popup */
+    const loginTrigger = document.querySelector(".login-trigger");
     const loginPopup = document.createElement("div");
     loginPopup.id = "login-popup";
     loginPopup.innerHTML = `
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="popup-content">
             <span class="close-btn">&times;</span>
             <h2>Login</h2>
-            <form>
+            <form id="login-form">
                 <div class="input-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" required>
@@ -35,34 +37,68 @@ document.addEventListener("DOMContentLoaded", function () {
             </form>
         </div>
     `;
-
     document.body.appendChild(loginPopup);
 
     const overlay = document.querySelector(".popup-overlay");
-    const popupContent = document.querySelector(".popup-content");
     const closeBtn = document.querySelector(".close-btn");
-    const loginTrigger = document.querySelector(".login-trigger");
+    const loginForm = document.getElementById("login-form");
 
-    function togglePopup() {
-        loginPopup.style.display = "block";
-        overlay.style.display = "block";
+    if (loginTrigger) {
+        loginTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            loginPopup.style.display = "block";
+            overlay.style.display = "block";
+        });
     }
 
-    function closePopup() {
-        loginPopup.style.display = "none";
-        overlay.style.display = "none";
+    if (closeBtn && overlay) {
+        closeBtn.addEventListener("click", function () {
+            loginPopup.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", function () {
+            loginPopup.style.display = "none";
+            overlay.style.display = "none";
+        });
     }
 
-    loginTrigger.addEventListener("click", function (e) {
-        e.preventDefault();
-        togglePopup();
-    });
+    /* Handle login form submission */
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const role = document.querySelector("input[name='role']:checked");
 
-    closeBtn.addEventListener("click", closePopup);
-    overlay.addEventListener("click", closePopup);
+            if (!role) {
+                alert("Please select a role!");
+                return;
+            }
 
-    // Fix: Prevent clicks inside the popup from closing it
-    popupContent.addEventListener("click", function (e) {
-        e.stopPropagation();
-    });
+            if (username === "admin" && password === "admin" && role.value === "admin") {
+                window.location.href = "../../pages/admin/index.html";
+            } else if (username === "reviewer" && password === "reviewer" && role.value === "reviewer") {
+                window.location.href = "../../pages/reviewer/index.html";
+            } else {
+                alert("Invalid credentials! Try again.");
+            }
+        });
+    }
+
+    /* JS for logout button */
+    const logoutTrigger = document.querySelector(".logout-trigger");
+
+    if (logoutTrigger) {
+        console.log("✅ Logout button found! Adding event listener...");
+        logoutTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("user");
+            sessionStorage.removeItem("user");
+            alert("You have been logged out.");
+            window.location.href = "../../index.html";
+        });
+    } else {
+        console.warn("⚠️ Logout button NOT found. Make sure it exists in the HTML.");
+    }
 });
