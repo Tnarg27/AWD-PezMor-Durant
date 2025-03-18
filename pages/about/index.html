@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="/assets/css/login.css"> <!-- login CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>PezMor - About Us</title>
 </head>
 <body>
@@ -12,10 +13,10 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="../../Logo/logov2.png" alt="PezMor" width="50">
+                    <img src="../../assets/img/logo.png" alt="PezMor" width="50">
                 </a>
             </div>
-            <a href="index.html">
+            <a href="../../index.html">
                 <h1>PezMor</h1>
             </a>
 
@@ -27,6 +28,7 @@
                 <ul>
                     <li><a href="../../index.html"><strong>Home</strong></a></li>
                     <li><a href="index.html"><strong>About</strong></a></li>
+                    <li><a href="#" class="login-trigger">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -58,16 +60,8 @@
         <p>&copy; 2025 PezMor. All Rights Reserved.</p>
     </footer>
 
-    <!-- JS for Hamburger -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector("#nav-menu");
+    <!-- Global script for login and hamburger -->
+    <script src="/assets/js/script.js" defer></script>
 
-        hamburger.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
-        });
-    });
-    </script>
 </body>
 </html>
