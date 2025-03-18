@@ -7,8 +7,11 @@
 }
 
 body {
-    background-color: #c5984a; /* #f9f4e6; Soft cream color */
+    background-color: #f9f4e6; /*  Soft cream color */
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -50,6 +53,7 @@ header {
     color: white;
 }
 
+
 .container h1:hover {
     color: #ffd700; /* Gold hover effect */
 }
@@ -79,6 +83,124 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* About Page */
+.about {
+    padding: 100px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.text-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.text-section h5 {
+    font-size: 20px;
+    color: #2d7a21;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.text-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    color: #333;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+/* Team Profile */
+.profile-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    max-width: 850px;
+    text-align: left;
+    margin: 20px;
+}
+
+.profile-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 3px solid #000000;
+}
+
+.details h2 {
+    color: #2d7a21;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.details p {
+    margin: 3px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.details a {
+    color: #f2d200;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
+
+#team {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.profile-box {
+    display: inline-flex;
+}
+
+
 /* When the hamburger menu is open, change the background color */
 nav.active ul {
     background-color: #f9f4e6; /* Soft Cream Color */
@@ -95,112 +217,14 @@ nav ul li a:hover {
     color: #ffd700; /* Gold hover effect */
 }
 
-/* Hero Section */
-.hero {
-    background: url('../img/bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-#features {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-#features .feature {
-    border: 2px solid #800020;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#features .feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-#features .feature {
-    border: 1px solid #800020;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    transition: transform 0.3s;
-}
-
-#features .feature:hover {
-    transform: scale(1.05);
-}
-
-#testimonials {
-    background-color: #fef9e6;
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-blockquote {
-    font-style: italic;
-    margin: 30px 0;
-    padding: 15px;
-    border-left: 5px solid #800020;
-    background-color: #fff;
-    display: inline-block;
-    max-width: 600px;
-    font-size: 1.2em;
-}
-
-
-blockquote {
-    font-style: italic;
-    margin: 20px 0;
-    padding: 10px;
-    border-left: 5px solid #800020;
-    background-color: #fff;
-    display: inline-block;
-    max-width: 600px;
-}
-
-
-.hero-content h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background: gold;
-    color: #800020;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background: #daa520;
-}
-
 /* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
 }
 
 img {
@@ -254,6 +278,28 @@ img {
     .hero-content p {
         font-size: 16px;
     }
+
+    /* About */
+    .about-content {
+        flex-direction: column; /* Stack content */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .text-section {
+        order: 1; /* Text first */
+        width: 80%;
+    }
+
+    .image-section {
+        order: 2; /* Image below */
+        width: 80%;
+    }
+
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 /* Small Screens (Mobile) */
@@ -284,6 +330,31 @@ img {
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    /* About */
+    .about-content {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .text-section {
+        order: 1; /* Ensure text appears first */
+        width: 95%;  /* Make text container wider */
+        max-width: 600px; /* Prevent it from getting too narrow */
+        font-size: 18px; /* Keep text readable */
+        line-height: 1.6; /* Improve spacing */
+        word-break: normal; /* Prevent breaking mid-word */
+        hyphens: auto; /* Improve word wrapping naturally */
+    }
+
+    .image-section {
+        order: 2; /* Image appears below the text */
+    }
+
+    .image-section img {
+        max-width: 90%;
+        height: auto;
     }
 }
 
