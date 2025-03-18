@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/login.css"> <!-- login CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>PezMor - Discover & Share Culinary Adventures</title>
+    <title>PezMor - Find Restaurants</title>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -13,10 +13,10 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/img/logo.png" alt="PezMor" width="50">
+                    <img src="../../assets/img/logo.png" alt="PezMor" width="50">
                 </a>
             </div>
-            <a href="index.html">
+            <a href="../../index.html">
                 <h1>PezMor</h1>
             </a>
 
@@ -26,31 +26,41 @@
             <!-- Navigation Menu -->
             <nav id="nav-menu">
                 <ul>
-                    <li><a href="index.html"><strong>Home</strong></a></li>
-                    <li><a href="pages/explore/index.html"><strong>Explore</strong></a></li>
-                    <li><a href="pages/about/index.html"><strong>About</strong></a></li>
+                    <li><a href="../../index.html"><strong>Home</strong></a></li>
+                    <li><a href="index.html"><strong>Explore</strong></a></li>
+                    <li><a href="../about/index.html"><strong>About</strong></a></li>
                     <li><a href="#" class="login-trigger">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Discover. Savor. Share Your Culinary Adventures</h2>
-            <p>Find the best restaurants, explore new cuisines, and connect with fellow food lovers worldwide.</p>
-            <a href="#" class="cta-button">VIEW SERVICES</a>
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Find Restaurants</h1>
+
+        <div id="visitor-view">
+            <table>
+                <tr>
+                    <th>Store</th>
+                    <th>Dish</th>
+                    <th>Location</th>
+                    <th>Reviews</th>
+                </tr>
+            </table>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 PezMor. All Rights Reserved.</p>
     </footer>
 
-    <!-- Global script for login and hamburger-->
-    <script src="assets/js/script.js"></script>
+    <!-- Global script for login and hamburger -->
+    <script src="/assets/js/script.js" defer></script>
+
+    <!-- JS for explore -->
+    <script src="assets/js/scripts.js" defer></script>
 
 </body>
 </html>

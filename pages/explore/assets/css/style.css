@@ -14,6 +14,10 @@ body {
     min-height: 100vh;
 }
 
+.main-content {
+    flex: 1; /* Pushes the footer down */
+}
+
 /* Header */
 header {
     background-color: #800020;
@@ -83,124 +87,6 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-/* About Page */
-.about {
-    padding: 100px 0;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.text-section {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    text-align: left;
-}
-
-.text-section h5 {
-    font-size: 20px;
-    color: #2d7a21;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.text-section h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.text-section p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.contact-link {
-    color: #333;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.image-section {
-    flex: 1;
-    text-align: center;
-    min-width: 300px;
-    max-width: 500px;
-}
-
-.image-section img {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    border-radius: 20px;
-}
-
-/* Team Profile */
-.profile-box {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    max-width: 850px;
-    text-align: left;
-    margin: 20px;
-}
-
-.profile-box img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 3px solid #000000;
-}
-
-.details h2 {
-    color: #2d7a21;
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.details p {
-    margin: 3px 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.details a {
-    color: #f2d200;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.details a:hover {
-    text-decoration: underline;
-}
-
-#team {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.profile-box {
-    display: inline-flex;
-}
-
-
 /* When the hamburger menu is open, change the background color */
 nav.active ul {
     background-color: #f9f4e6; /* Soft Cream Color */
@@ -223,8 +109,6 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    width: 100%;
-    margin-top: auto;
 }
 
 img {
@@ -240,6 +124,52 @@ img {
     border: none;
     color: white;
     cursor: pointer;
+}
+
+/* Table */
+.hidden {
+    display: none;
+}
+
+/* Center the page title */
+.main-content h1 {
+    text-align: center;
+    margin: 40px;
+    font-size: 28px;
+    color: #800020; /* Dark Red */
+}
+
+/* Add margin around the table */
+table {
+    width: 80%;
+    border-collapse: separate;
+    margin: 20px auto; /* Center table with margin */
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: fixed;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header */
+th {
+    background-color: #800020; /* Dark red */
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Table cells */
+th, td {
+    border: 1px solid #ffffff;
+    padding: 12px;
+    text-align: center;;
+}
+
+/* Alternate row coloring */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 /* ================= RESPONSIVE DESIGN ================== */
@@ -278,28 +208,6 @@ img {
     .hero-content p {
         font-size: 16px;
     }
-
-    /* About */
-    .about-content {
-        flex-direction: column; /* Stack content */
-        text-align: center;
-        padding: 30px;
-    }
-
-    .text-section {
-        order: 1; /* Text first */
-        width: 80%;
-    }
-
-    .image-section {
-        order: 2; /* Image below */
-        width: 80%;
-    }
-
-    .image-section img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 /* Small Screens (Mobile) */
@@ -330,31 +238,6 @@ img {
 
     nav ul li {
         margin: 10px 0;
-    }
-
-    /* About */
-    .about-content {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center;
-    }
-
-    .text-section {
-        order: 1; /* Ensure text appears first */
-        width: 95%;  /* Make text container wider */
-        max-width: 600px; /* Prevent it from getting too narrow */
-        font-size: 18px; /* Keep text readable */
-        line-height: 1.6; /* Improve spacing */
-        word-break: normal; /* Prevent breaking mid-word */
-        hyphens: auto; /* Improve word wrapping naturally */
-    }
-
-    .image-section {
-        order: 2; /* Image appears below the text */
-    }
-
-    .image-section img {
-        max-width: 90%;
-        height: auto;
     }
 }
 
