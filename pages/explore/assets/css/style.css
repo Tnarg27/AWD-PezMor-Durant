@@ -162,7 +162,7 @@ th {
 
 /* Table cells */
 th, td {
-    border: 1px solid #ffffff;
+    border: 1px solid #f9f4e6;
     padding: 12px;
     text-align: center;;
 }
@@ -171,6 +171,12 @@ th, td {
 tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+#visitor-view table,
+#approved-reviews table {
+    background-color: white; /* Set table background to white */
+}
+
 
 /* ================= RESPONSIVE DESIGN ================== */
 
