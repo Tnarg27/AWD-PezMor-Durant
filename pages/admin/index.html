@@ -26,9 +26,6 @@
             <!-- Navigation Menu -->
             <nav id="nav-menu">
                 <ul>
-                    <li><a href="../../index.html"><strong>Home</strong></a></li>
-                    <li><a href="../explore/index.html"><strong>Explore</strong></a></li>
-                    <li><a href="../about/index.html"><strong>About</strong></a></li>
                     <li><a href="index.html"><strong>Admin</strong></a></li>
                     <li><a href="#" class="logout-trigger">Logout</a></li>
                 </ul>
@@ -38,7 +35,7 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <h1>Manage Food Reviews</h1>
+        <h1>MANAGE FOOD REVIEWS & ADD NEW USER</h1>
 
         <div id="admin-view">
             <h4>Pending Reviews</h4>
@@ -70,6 +67,29 @@
                 </thead>
                 <tbody></tbody>
             </table>
+
+            <!-- Add new account -->
+            <h4>Add New User</h4>
+            <form id="add-user-form">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" required>
+
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" required>
+
+                <label>Select Role:</label>
+                <div>
+                    <label><input type="radio" name="new-role" value="admin" required> Admin</label>
+                    <label><input type="radio" name="new-role" value="reviewer" required> Food Reviewer</label>
+                </div>
+
+                <button type="submit">Add User</button>
+            </form>
+
+            <h5>User List</h5>
+            <ul id="user-list">
+                <!-- Users (Admins & Reviewers) will be displayed here -->
+            </ul>
         </div>
     </div>
 

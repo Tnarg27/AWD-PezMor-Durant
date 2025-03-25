@@ -111,7 +111,7 @@ nav ul li a:hover {
 .main-content h1 {
     text-align: center;
     margin: 40px;
-    font-size: 28px;
+    font-size: 30px;
     color: #800020; /* Dark Red */
 }
 
@@ -169,8 +169,6 @@ nav ul li a:hover {
     margin: 0 auto; /* Center table */
 }
 
-
-
 /* Approved Reviews Table */
 /* Hide elements if needed */
 .hidden {
@@ -221,6 +219,123 @@ tbody tr:nth-child(even) {
 #pending-reviews-table tbody tr,
 #approved-reviews-table tbody tr {
     background-color: white;
+}
+
+/* ADD NEW USER */
+/* Container for the form */
+#add-user-form {
+    max-width: 350px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Label styling */
+#add-user-form label {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* Input field styling */
+#add-user-form input[type="text"],
+#add-user-form input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Role selection layout */
+#add-user-form div {
+    display: flex;
+    gap: 15px;
+}
+
+/* Radio button spacing */
+#add-user-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Button styling */
+#add-user-form button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#add-user-form button:hover {
+    background: #218838;
+}
+
+/* Style for the user list container */
+#user-list {
+    list-style: none;
+    padding: 0;
+    max-width: 350px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* User List Heading */
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #800020;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #800020;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Individual list item */
+#user-list li {
+    background: #f8f9fa;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* User Role Styling */
+#user-list li span {
+    font-weight: bold;
+    color: #6c757d;
+}
+
+/* Delete Button */
+.delete-user-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-user-btn:hover {
+    background: #c82333;
 }
 
 /* Footer */

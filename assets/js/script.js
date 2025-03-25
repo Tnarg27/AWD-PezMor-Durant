@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Script loaded successfully.");
+    console.log("✅ Script loaded successfully.");
 
-    /* JS for Hamburger */
+    /* ✅ JS for Hamburger Menu */
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector("#nav-menu");
 
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /* JS for login popup */
+    /* ✅ JS for Login Popup */
     const loginTrigger = document.querySelector(".login-trigger");
     const loginPopup = document.createElement("div");
     loginPopup.id = "login-popup";
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(loginPopup);
 
-    const overlay = document.querySelector(".popup-overlay");
-    const closeBtn = document.querySelector(".close-btn");
+    const overlay = loginPopup.querySelector(".popup-overlay");
+    const closeBtn = loginPopup.querySelector(".close-btn");
     const loginForm = document.getElementById("login-form");
 
     if (loginTrigger) {
@@ -63,39 +63,44 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /* Handle login form submission */
+    /* ✅ Secure User Login Handling */
+    function getUsers() {
+        return JSON.parse(localStorage.getItem("users")) || {};
+    }
+
     if (loginForm) {
         loginForm.addEventListener("submit", function (e) {
             e.preventDefault();
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
             const role = document.querySelector("input[name='role']:checked");
 
             if (!role) {
-                alert("Please select a role!");
+                alert("❌ Please select a role!");
                 return;
             }
 
-            if (username === "admin" && password === "admin" && role.value === "admin") {
-                window.location.href = "../../pages/admin/index.html";
-            } else if (username === "reviewer" && password === "reviewer" && role.value === "reviewer") {
-                window.location.href = "../../pages/reviewer/index.html";
+            let users = getUsers();
+            if (users[username] && atob(users[username].password) === password && users[username].role === role.value) {
+                const authToken = btoa(username + ":" + role.value + ":" + Date.now());
+                sessionStorage.setItem("authToken", authToken);
+                alert(`✅ ${role.value} login successful!`);
+                window.location.href = `../../pages/${role.value}/index.html`;
             } else {
-                alert("Invalid credentials! Try again.");
+                alert("❌ Invalid credentials! Try again.");
             }
         });
     }
 
-    /* JS for logout button */
+    /* ✅ Secure Logout Handling */
     const logoutTrigger = document.querySelector(".logout-trigger");
 
     if (logoutTrigger) {
         console.log("✅ Logout button found! Adding event listener...");
         logoutTrigger.addEventListener("click", function (e) {
             e.preventDefault();
-            localStorage.removeItem("user");
-            sessionStorage.removeItem("user");
-            alert("You have been logged out.");
+            sessionStorage.clear();
+            alert("✅ You have been logged out.");
             window.location.href = "../../index.html";
         });
     } else {

@@ -21,6 +21,6 @@ document.getElementById("review-form").addEventListener("submit", function(event
     reviews.push(review);
     localStorage.setItem("reviews", JSON.stringify(reviews));
 
-    alert("Review submitted for approval!");
+    alert("✅ Review submitted for approval!");
     document.getElementById("review-form").reset();
 });
