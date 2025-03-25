@@ -94,9 +94,81 @@ nav.active ul {
     border-radius: 5px;
 }
 
-/* Sort */
-.sort-options {
-    margin-top: 10px;
+/* Aligns Sort By and Search Bar in the same row */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 800px; /* Adjust this width to match the table */
+}
+
+/* Style the Sort By dropdown */
+.sort-options select {
+    padding: 8px;
+    font-size: 17px;
+    border: 1px solid grey;
+    background: #f1f1f1;
+}
+
+/* Search Bar Styling */
+form.example {
+    display: flex;
+    align-items: center;
+    width: 200px; /* Adjust width as needed */
+}
+
+/* Input Field */
+form.example input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+/* Search Button */
+form.example button {
+    width: 20%;
+    padding: 6px;
+    background: #800020;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #ffd700;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.example {
+    position: relative;
+    display: inline-block;
+    left: 10px; /* Adjust the value as needed */
+}
+
+/* X button */
+.example #clearBtn {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 45px; /* Adjust based on button size */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: gray;
 }
 
 /* Align sort options with content */
@@ -109,6 +181,11 @@ nav.active ul {
 }
 .sort-options label {
     font-size: 17px;
+    font-weight: bold;
+}
+
+.sort-options select {
+    padding: 5px;
     font-weight: bold;
 }
 

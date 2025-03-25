@@ -47,3 +47,41 @@ document.getElementById('sort-by').addEventListener('change', function() {
 });
 
 document.addEventListener("DOMContentLoaded", () => displayApprovedReviews());
+
+// Search button function
+function searchReviews() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const tableRows = document.querySelectorAll("#visitor-view table tr");
+
+    tableRows.forEach((row, index) => {
+        if (index === 0) return; // Skip header row
+        const rowText = row.textContent.toLowerCase();
+        row.style.display = rowText.includes(searchInput) ? "" : "none";
+    });
+
+    toggleClearButton(); // Show/hide "X" button
+}
+
+// Show/Hide "❌" button
+function toggleClearButton() {
+    const searchInput = document.getElementById("searchInput");
+    const clearBtn = document.getElementById("clearBtn");
+    clearBtn.style.display = searchInput.value ? "block" : "none";
+}
+
+// Clear search input & reset table
+function clearSearch() {
+    document.getElementById("searchInput").value = "";
+    searchReviews(); // Resets the table
+}
+
+// Trigger search when clicking the button
+document.querySelector(".example button").addEventListener("click", searchReviews);
+
+// Trigger search when pressing "Enter"
+document.getElementById("searchInput").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searchReviews();
+    }
+});

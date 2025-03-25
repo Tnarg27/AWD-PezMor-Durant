@@ -118,7 +118,7 @@
 nav ul li:last-child a {
     background: #f2d200; /* Gold color */
     color: #800020; /* Dark red text */
-    padding: 3px 10px; 
+    padding: 3px 10px;
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s ease, color 0.3s ease;
@@ -128,4 +128,3 @@ nav ul li:last-child a:hover {
     background: #ffd700; /* Lighter gold */
     color: #ffffff; /* Darker red for contrast */
 }
-

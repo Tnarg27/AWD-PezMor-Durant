@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/login.css"> <!-- login CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Load icon library -->
     <title>PezMor - Find Restaurants</title>
 </head>
 <body>
@@ -39,7 +40,7 @@
     <div class="main-content">
         <h1>FIND RESTAURANTS</h1>
 
-        <!-- Sort option -->
+        <!-- Sort and Search -->
         <div class="content-header">
             <div class="sort-options">
                 <label for="sort-by">Sort By:</label>
@@ -54,6 +55,13 @@
                     <option value="rating-desc">Rating (5-1)</option>
                 </select>
             </div>
+
+            <!-- Search Bar -->
+            <form class="example">
+                <input type="text" id="searchInput" placeholder="Search..." onkeyup="highlightSearch()">
+                <button type="button"><i class="fa fa-search"></i></button>
+                <button id="clearBtn" onclick="clearSearch()">X</button>
+            </form>
         </div>
 
         <!-- Approved Lists -->
