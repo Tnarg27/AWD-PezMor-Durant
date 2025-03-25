@@ -1,5 +1,21 @@
+/* Ensure Default Admin Exists */
+function ensureDefaultAdmin() {
+    let users = JSON.parse(localStorage.getItem("users")) || {};
+
+    if (!users["admin"]) {
+        users["admin"] = {
+            password: btoa("admin"),
+            role: "admin"
+        };
+        localStorage.setItem("users", JSON.stringify(users));
+    }
+}
+
+/* ✅ Run default admin check when the script loads */
 document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ Script loaded successfully.");
+
+    ensureDefaultAdmin(); // ✅ Call the function to ensure the default admin exists
 
     /* ✅ JS for Hamburger Menu */
     const hamburger = document.querySelector(".hamburger");

@@ -27,19 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-/* ✅ Ensure Default Admin Exists */
-function ensureDefaultAdmin() {
-    let users = JSON.parse(localStorage.getItem("users")) || {};
-
-    if (!users["admin"]) {
-        users["admin"] = {
-            password: btoa("admin"),
-            role: "admin"
-        };
-        localStorage.setItem("users", JSON.stringify(users));
-    }
-}
-
 /* ✅ Add New User */
 function addUser(username, password, role) {
     let users = JSON.parse(localStorage.getItem("users")) || {};
@@ -55,7 +42,7 @@ function addUser(username, password, role) {
     };
 
     localStorage.setItem("users", JSON.stringify(users));
-    
+
     alert(`✅ New ${role} added successfully!`);
     displayUsers();
 }
@@ -151,7 +138,7 @@ function displayReviews() {
 /* ✅ Approve Review */
 function approveReview(index) {
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-    
+
     if (reviews[index] && reviews[index].status === "pending") {
         reviews[index].status = "approved";
         localStorage.setItem("reviews", JSON.stringify(reviews));
