@@ -104,73 +104,32 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 80px 20px;
 }
 
-#features {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.hero-title {
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
-#features .feature {
-    border: 2px solid #800020;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#features .feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-#features .feature {
-    border: 1px solid #800020;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    transition: transform 0.3s;
-}
-
-#features .feature:hover {
-    transform: scale(1.05);
-}
-
-#testimonials {
-    background-color: #fef9e6;
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-blockquote {
-    font-style: italic;
-    margin: 30px 0;
-    padding: 15px;
-    border-left: 5px solid #800020;
-    background-color: #fff;
-    display: inline-block;
-    max-width: 600px;
+.hero-description {
     font-size: 1.2em;
-}
-
-
-blockquote {
-    font-style: italic;
     margin: 20px 0;
-    padding: 10px;
-    border-left: 5px solid #800020;
-    background-color: #fff;
-    display: inline-block;
-    max-width: 600px;
 }
 
+.cta-button {
+    background-color: #ff7f50; /* Example button color */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff5722; /* Change to a darker shade on hover */
+}
 
 .hero-content h2 {
     font-size: 40px;
@@ -193,6 +152,128 @@ blockquote {
 
 .cta-button:hover {
     background: #daa520;
+}
+
+/* Features Section */
+#features {
+    background-color: #f9f4e6; /* Light beige background */
+    padding: 80px 20px; /* Vertical padding for spacing */
+    text-align: center; /* Center the content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift the section */
+}
+
+#features h2 {
+    font-size: 36px; /* Larger font size for the title */
+    color: #800020; /* Deep red color for the title */
+    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+    margin-bottom: 40px; /* Space between title and features */
+    position: relative; /* Position for the decorative elements */
+    display: inline-block; /* Inline-block for centering */
+    padding-bottom: 10px; /* Padding for the underline */
+}
+
+#features h2::after {
+    content: ''; /* Decorative underline */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: 0; /* Align it to the bottom */
+    transform: translateX(-50%); /* Center it */
+    width: 100%; /* Width of the underline */
+    height: 7px; /* Height of the underline */
+    background-color: #800020; /* Deep red color */
+    border-radius: 2px; /* Rounded corners */
+}
+
+#features .feature {
+    background-color: #fff; /* White background for each feature */
+    border: 2px solid #800020; /* Deep red border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside each feature card */
+    margin: 20px auto; /* Margin around each feature card */
+    max-width: 350px; /* Limit the max width for each card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+#features .feature h3 {
+    font-size: 24px; /* Slightly larger text for the feature titles */
+    color: #333; /* Dark text color for the feature title */
+    margin-bottom: 15px; /* Space between title and description */
+}
+
+#features .feature p {
+    font-size: 16px; /* Smaller font size for descriptions */
+    color: #666; /* Lighter gray color for the description */
+}
+
+#features .feature:hover {
+    transform: scale(1.05); /* Slightly enlarge the feature card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f9f4e6; /* Soft background color */
+    padding: 80px 20px; /* Add vertical padding for spacing */
+    text-align: center; /* Center the content */
+}
+
+/* Title Styling */
+#testimonials h2 {
+    font-size: 36px; /* Large title size for visibility */
+    color: #800020; /* Deep red color for the title */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    margin-bottom: 40px; /* Space between the title and blockquotes */
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative; /* Position for the decorative elements */
+    display: inline-block; /* Inline-block for centering */
+    padding-bottom: 10px; /* Padding for the underline */
+}
+
+#testimonials h2::after {
+    content: ''; /* Decorative underline */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: 0; /* Align it to the bottom */
+    transform: translateX(-50%); /* Center it */
+    width: 100%; /* Width of the underline */
+    height: 7px; /* Height of the underline */
+    background-color: #800020; /* Deep red color */
+    border-radius: 2px; /* Rounded corners */
+}
+
+.testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+blockquote {
+    font-style: italic; /* Italicize the quote */
+    margin: 30px 20px; /* Add margin for spacing and center the blockquotes */
+    padding: 20px; /* Inside padding for the quote */
+    border-left: 5px solid #800020; /* Deep red left border to highlight the quote */
+    background-color: #fff; /* White background for the blockquote */
+    display: inline-block; /* Make the blockquote inline-block to center it */
+    max-width: 600px; /* Set a maximum width for the blockquote */
+    font-size: 1.2em; /* Adjust the font size for better readability */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for the blockquote */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+#testimonials footer {
+    font-size: 1em; /* Adjust the font size of the footer */
+    color: #ffffff; /* Lighter color for the name */
+    margin-top: 15px; /* Space between the quote and the author's name */
+    font-style: normal; /* Remove the italic style from the author's name */
+    font-weight: bold; /* Make the author's name bold */
 }
 
 /* Footer */
@@ -219,7 +300,6 @@ img {
 }
 
 /* ================= RESPONSIVE DESIGN ================== */
-
 /* 🌟 Extra Large Screens (4K Displays) */
 @media (min-width: 1800px) {
     .container {
