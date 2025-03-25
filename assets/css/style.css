@@ -163,7 +163,7 @@ nav ul li a:hover {
 }
 
 #features h2 {
-    font-size: 36px; /* Larger font size for the title */
+    font-size: 30px; /* Larger font size for the title */
     color: #800020; /* Deep red color for the title */
     font-family: 'Arial', sans-serif; /* Clean sans-serif font */
     margin-bottom: 40px; /* Space between title and features */
@@ -219,7 +219,7 @@ nav ul li a:hover {
 
 /* Title Styling */
 #testimonials h2 {
-    font-size: 36px; /* Large title size for visibility */
+    font-size: 30px; /* Large title size for visibility */
     color: #800020; /* Deep red color for the title */
     font-family: 'Arial', sans-serif; /* Clean, modern font */
     margin-bottom: 40px; /* Space between the title and blockquotes */

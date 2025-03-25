@@ -147,7 +147,64 @@ nav ul li a {
     border-radius: 20px;
 }
 
-/* Team Profile */
+/* Mission and Vision Section */
+.mission-vision {
+    padding: 100px 0;
+}
+
+.mission-vision .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center; /* Center the content */
+    border: 2px solid #800020; /* Add a border with a specified color and width */
+    padding: 20px; /* Add padding inside the border */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.mission-vision h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+    color: #800020; /* Red color for the h2 */
+}
+
+.mission-vision p {
+    font-size: 21px;
+    line-height: 1.6;
+    margin: 15px;
+    text-align: left;
+    color: #333; /* Dark text color */
+}
+
+/* Team Section */
+#team {
+    text-align: center;
+    padding: 100px 0; /* Add padding for spacing */
+}
+
+#team h3 {
+    font-size: 30px; /* Larger font size for the h1 */
+    font-weight: bold;
+    color: #800020; /* Dark red color */
+    margin-bottom: 40px; /* Space below the h1 */
+    position: relative; /* Position for decorative elements */
+    display: inline-block; /* Inline-block for centering */
+    padding-bottom: 10px; /* Padding for the underline */
+}
+
+#team h3::after {
+    content: ''; /* Decorative underline */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: 0; /* Align it to the bottom */
+    transform: translateX(-50%); /* Center it */
+    width: 60%; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background-color: #800020; /* Dark red color */
+    border-radius: 2px; /* Rounded corners */
+}
+
 .profile-box {
     display: flex;
     align-items: center;
@@ -161,6 +218,12 @@ nav ul li a {
     margin: 20px;
 }
 
+.profile-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .profile-box img {
     width: 120px;
     height: 120px;
@@ -170,7 +233,7 @@ nav ul li a {
 }
 
 .details h2 {
-    color: #2d7a21;
+    color: #000000;
     font-size: 20px;
     margin-bottom: 5px;
 }
@@ -182,7 +245,7 @@ nav ul li a {
 }
 
 .details a {
-    color: #f2d200;
+    color: #2d7a21;
     font-weight: bold;
     text-decoration: none;
 }

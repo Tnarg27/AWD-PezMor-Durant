@@ -94,6 +94,24 @@ nav.active ul {
     border-radius: 5px;
 }
 
+/* Sort */
+.sort-options {
+    margin-top: 10px;
+}
+
+/* Align sort options with content */
+.content-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Aligns items vertically in the center */
+    margin-bottom: 10px;
+    padding-left: 10%; 
+}
+.sort-options label {
+    font-size: 17px;
+    font-weight: bold;
+}
+
 /* Change text color when menu expands */
 nav.active ul li a {
     color: #800020; /* Dark red text for contrast */
@@ -131,12 +149,33 @@ img {
     display: none;
 }
 
+.main-content {
+    text-align: center;
+}
+
 /* Center the page title */
 .main-content h1 {
     text-align: center;
     margin: 40px;
     font-size: 28px;
     color: #800020; /* Dark Red */
+    position: relative; /* Position for the underline */
+    display: inline-block; /* Inline-block for centering */
+    padding-bottom: 10px; /* Padding for the underline */
+    margin-left: auto; /* Center the h1 */
+    margin-right: auto; /* Center the h1 */
+}
+
+.main-content h1::after {
+    content: ''; /* Decorative underline */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: 0; /* Align it to the bottom */
+    transform: translateX(-50%); /* Center it */
+    width: 100%; /* Width of the underline */
+    height: 5px; /* Height of the underline */
+    background-color: #800020; /* Deep red color */
+    border-radius: 2px; /* Rounded corners */
 }
 
 /* Add margin around the table */

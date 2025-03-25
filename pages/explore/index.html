@@ -37,8 +37,26 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <h1>Find Restaurants</h1>
+        <h1>FIND RESTAURANTS</h1>
 
+        <!-- Sort option -->
+        <div class="content-header">
+            <div class="sort-options">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="store-asc">Store (A-Z)</option>
+                    <option value="store-desc">Store (Z-A)</option>
+                    <option value="dish-asc">Dish (A-Z)</option>
+                    <option value="dish-desc">Dish (Z-A)</option>
+                    <option value="location-asc">Location (A-Z)</option>
+                    <option value="location-desc">Location (Z-A)</option>
+                    <option value="rating-asc">Rating (1-5)</option>
+                    <option value="rating-desc">Rating (5-1)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Approved Lists -->
         <div id="approved-reviews"></div>
         <div id="visitor-view">
             <table>
