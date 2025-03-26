@@ -157,7 +157,7 @@ nav ul li a:hover {
 /* Features Section */
 #features {
     background-color: #f9f4e6; /* Light beige background */
-    padding: 80px 20px; /* Vertical padding for spacing */
+    padding: 60px 20px; /* Vertical padding for spacing */
     text-align: center; /* Center the content */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift the section */
 }
@@ -184,14 +184,22 @@ nav ul li a:hover {
     border-radius: 2px; /* Rounded corners */
 }
 
+#features .feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 #features .feature {
-    background-color: #fff; /* White background for each feature */
-    border: 2px solid #800020; /* Deep red border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 30px; /* Padding inside each feature card */
-    margin: 20px auto; /* Margin around each feature card */
-    max-width: 350px; /* Limit the max width for each card */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    background-color: #fff;
+    border: 2px solid #800020;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #features .feature h3 {
@@ -321,6 +329,9 @@ img {
     .hero-content p {
         font-size: 20px;
     }
+    #features .feature-container {
+        justify-content: space-between;
+    }
 }
 
 /* 📱 Medium Screens (Tablets) */
@@ -333,6 +344,13 @@ img {
     }
     .hero-content p {
         font-size: 16px;
+    }
+    #features .feature-container {
+        justify-content: center;
+    }
+
+    #features .feature {
+        width: 45%;
     }
 }
 
@@ -360,10 +378,47 @@ img {
 
     nav ul {
         flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Ensure text is centered */
+        padding: 10px 0;
+        width: 100%;
+
     }
 
     nav ul li {
         margin: 10px 0;
+        text-align: center;
+    }
+
+    #features .container {
+        display: block; /* Force features to stack */
+        width: 100%;
+        text-align: center; /* Keep content centered */
+    }
+
+    #features .feature {
+        display: block; /* Ensures full width */
+        width: 100% !important; /* Fully stretches to container */
+        max-width: 400px; /* Prevents being too wide */
+        margin: 20px auto; /* Centers each box */
+    }
+
+    .testimonial-grid {
+        flex-direction: column; /* Stack testimonials vertically */
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column; /* Stack rows vertically */
+        width: 100%;
+        align-items: center;
+    }
+
+    blockquote {
+        width: 90%; /* Make testimonials take most of the width */
+        max-width: 400px; /* Limit max size */
+        font-size: 1em; /* Adjust font size for readability */
+        text-align: left; /* Align text properly */
     }
 }
 
@@ -374,5 +429,18 @@ img {
     }
     .hero-content p {
         font-size: 12px;
+    }
+
+    #features .feature {
+        width: 95%; /* Slightly smaller for better spacing */
+        font-size: 1em;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    blockquote {
+        width: 95%;
+        font-size: 0.9em; /* Slightly smaller font for small screens */
+        padding: 15px; /* Reduce padding */
     }
 }

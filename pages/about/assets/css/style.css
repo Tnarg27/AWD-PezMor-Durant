@@ -389,6 +389,10 @@ img {
 
     nav ul {
         flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Ensure text is centered */
+        padding: 10px 0;
+        width: 100%;
     }
 
     nav ul li {
